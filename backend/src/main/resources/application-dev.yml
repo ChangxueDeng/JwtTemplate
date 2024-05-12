@@ -1,0 +1,40 @@
+server:
+  port: 8081
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+springdoc:
+  swagger-ui:
+    url: /v3/api-docs
+spring:
+  security:
+    filter:
+      order: -100
+    jwt:
+      key: "2024"
+      expire: 1
+    cors:
+      allowed-origins: "*"
+  datasource:
+    url: jdbc:mysql://47.113.144.109:3306/template
+    username: root
+    password: 0729
+  data:
+    redis:
+      host: 47.113.144.109
+      port: 6379
+      database: 0
+  mail:
+    # 163邮箱的地址为smtp.163.com，直接填写即可
+    host: smtp.163.com
+    # 你申请的163邮箱
+    username: 19989150208@163.com
+    # 注意密码是在开启smtp/pop3时自动生成的，记得保存一下，不然就找不到了
+    password: ACVPKFIIEZSOKYHA
+    port: 25
+  rabbitmq:
+    port: 5672
+    host: 47.113.144.109
+    virtual-host: /template
+    username: rabbitmq
+    password: 0729

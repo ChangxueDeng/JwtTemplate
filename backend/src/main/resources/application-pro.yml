@@ -1,0 +1,35 @@
+server:
+  port: 8080
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+spring:
+  security:
+    filter:
+      order: -100
+    jwt:
+      key: dcx
+      expire: 1
+  data:
+    redis:
+      host: 192.168.137.129
+      port: 6379
+      database: 1
+  mail:
+    # 163邮箱的地址为smtp.163.com，直接填写即可
+    host: smtp.163.com
+    # 你申请的163邮箱
+    username: 19989150208@163.com
+    # 注意密码是在开启smtp/pop3时自动生成的，记得保存一下，不然就找不到了
+    password: ACVPKFIIEZSOKYHA
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 5211
+    url: jdbc:mysql://192.168.137.129:3306/jwt
+  rabbitmq:
+    addresses: 192.168.137.129
+    username: admin
+    password: admin
+    virtual-host: /
+    port: 5672
